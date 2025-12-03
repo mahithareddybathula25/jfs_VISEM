@@ -64,6 +64,8 @@ select {
     border: 2px solid #222;
     line-height: 1.5;
 }
+
+/*** Only for James Gosling — square shape ***/
 .square {
     border-radius: 0 !important;
 }

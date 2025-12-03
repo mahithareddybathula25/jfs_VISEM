@@ -54,6 +54,7 @@ document.getElementById("inventorSelect").addEventListener("change", function ()
         img.src = inventorData[key].img;
         details.innerHTML = inventorData[key].info;
 
+        // Only James Gosling gets square image
         if (key === "james") {
             img.classList.add("square");
         } else {
@@ -61,4 +62,3 @@ document.getElementById("inventorSelect").addEventListener("change", function ()
         }
     }
 });
-
