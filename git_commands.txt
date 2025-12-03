@@ -1,0 +1,19 @@
+TO INITIALIZE
+
+1. git init
+2. git add .
+3. git commit -m "message"
+4. git remote add origin <remote-url>
+5. git push origin master 			("git branch"-->check if main or master)
+6. check in remote repository
+
+IF ALREADY INITIALIZED
+
+1. git status
+2. git add .
+3. git commit -m "message"
+4. git push origin master
+
+IF YOU WANT TO RETRIEVE THE REMOTE REPO TO LOCAL PC
+
+git clone <remote-url>
