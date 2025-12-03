@@ -1,64 +1,71 @@
-const inventorData = {
-    james: {
-        img: "images/james.jpg",
-        info: "James Gosling is the creator of Java. He developed Java at Sun Microsystems in 1995, laying the foundation for platform-independent programming."
-    },
-    guido: {
-        img: "images/guido.jpg",
-        info: "Guido van Rossum invented Python in 1991 with a philosophy of code readability, simplicity, and developer productivity."
-    },
-    dennis: {
-        img: "images/dennis.jpg",
-        info: "Dennis Ritchie invented the C programming language and co-created Unix, massively influencing the world of operating systems and programming."
-    },
-    bjarne: {
-        img: "images/bjarne.jpg",
-        info: "Bjarne Stroustrup created C++ as an extension of C, adding object-oriented features while maintaining high performance."
-    },
-    brendan: {
-        img: "images/brendan.jpg",
-        info: "Brendan Eich invented JavaScript in 1995 while working at Netscape, enabling dynamic and interactive web pages."
-    },
-    rasmus: {
-        img: "images/rasmus.jpg",
-        info: "Rasmus Lerdorf created PHP originally as a tool to manage his personal website. It later evolved into a major web programming language."
-    },
-    yukihiro: {
-        img: "images/yukihiro.jpg",
-        info: "Yukihiro Matsumoto (Matz) developed Ruby with focus on programmer happiness and elegant coding practices."
-    },
-    anders: {
-        img: "images/anders.jpg",
-        info: "Anders Hejlsberg is the creator of C# and has also contributed to TypeScript and Turbo Pascal."
-    },
-    grace: {
-        img: "images/grace.jpg",
-        info: "Grace Hopper was a pioneer of computer programming and created COBOL. She also developed the first compiler for a programming language."
-    },
-    john: {
-        img: "images/john.jpg",
-        info: "John McCarthy created Lisp, one of the oldest programming languages and a foundation for artificial intelligence research."
-    }
+const inventors = {
+  james: {
+    img: "images/james.jpg",
+    text: "James Gosling created Java at Sun Microsystems. Java became one of the most widely used programming languages worldwide, known for portability and enterprise use."
+  },
+  guido: {
+    img: "images/guido.jpg",
+    text: "Guido van Rossum invented Python, a language focused on readability, simplicity, and rapid development. It is heavily used in AI, web development, and automation."
+  },
+  dennis: {
+    img: "images/dennis.jpg",
+    text: "Dennis Ritchie developed the C programming language and co-created UNIX. C influenced nearly every major programming language in use today."
+  },
+  bjarne: {
+    img: "images/bjarne.jpg",
+    text: "Bjarne Stroustrup created C++, combining the efficiency of C with object-oriented programming. It is essential in game engines, system software, and high-performance applications."
+  },
+  brendan: {
+    img: "images/brendan.jpg",
+    text: "Brendan Eich invented JavaScript in 1995. It became the standard scripting language for web browsers and now powers modern interactive websites."
+  },
+  rasmus: {
+    img: "images/rasmus.jpg",
+    text: "Rasmus Lerdorf created PHP originally for managing his personal website. It later evolved into one of the most widely used server-side languages."
+  },
+  yukihiro: {
+    img: "images/yukihiro.jpg",
+    text: "Yukihiro 'Matz' Matsumoto created Ruby, a language designed for developer happiness. Ruby on Rails made it extremely popular for web applications."
+  },
+  anders: {
+    img: "images/anders.jpg",
+    text: "Anders Hejlsberg created C#, a modern object-oriented language. He also developed Turbo Pascal and Delphi, making major contributions to software engineering."
+  },
+  grace: {
+    img: "images/grace.jpg",
+    text: "Grace Hopper invented COBOL and was a pioneer in early computer programming. She helped create machine-independent programming concepts."
+  },
+  john: {
+    img: "images/john.jpg",
+    text: "John McCarthy created Lisp, one of the oldest programming languages still in use. He is considered a founder of artificial intelligence."
+  }
 };
 
-document.getElementById("inventorSelect").addEventListener("change", function () {
-    const key = this.value;
-    const img = document.getElementById("inventorImg");
-    const details = document.getElementById("details");
+function showInventor() {
+  const key = document.getElementById("inventorSelect").value;
+  const photo = document.querySelector(".image-circle img");
+  const frame = document.querySelector(".image-circle");
+  const desc = document.getElementById("description");
 
-    if (key === "") {
-        img.src = "";
-        details.innerHTML = "";
-        img.classList.remove("square");
-    } else {
-        img.src = inventorData[key].img;
-        details.innerHTML = inventorData[key].info;
+  if (!key) {
+    photo.style.display = "none";
+    desc.textContent = "Select an inventor to display information.";
+    frame.classList.remove("glow-frame");
+    frame.style.borderRadius = "50%"; // default circle
+    return;
+  }
 
-        // Only James Gosling gets square image
-        if (key === "james") {
-            img.classList.add("square");
-        } else {
-            img.classList.remove("square");
-        }
-    }
-});
+  const data = inventors[key];
+  photo.src = data.img;
+  photo.style.display = "block";
+  desc.textContent = data.text;
+
+  if (key === "james") {
+    frame.style.borderRadius = "0%"; // Task 1: square for James
+    frame.classList.add("glow-frame"); // Task 2: add glow
+  } else {
+    frame.style.borderRadius = "50%"; // circle for others
+    frame.classList.remove("glow-frame"); // remove glow
+  }
+}
+
