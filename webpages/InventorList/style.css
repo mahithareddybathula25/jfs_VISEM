@@ -73,9 +73,9 @@ select {
 }
 /*Task 2:  Glow effect ONLY for James */
 @keyframes glowPulse {
-  0% { box-shadow: 0 0 5px rgba(0,140,255,0.3); }
-  50% { box-shadow: 0 0 25px rgba(0,140,255,1); }
-  100% { box-shadow: 0 0 5px rgba(0,140,255,0.3); }
+  0% { box-shadow: 0 0 5px rgba(255, 0, 0, 0.3); }
+  50% { box-shadow: 0 0 25px rgb(255, 0, 34); }
+  100% { box-shadow: 0 0 5px rgba(255, 0, 136, 0.3); }
 }
 
 .glow-frame {
