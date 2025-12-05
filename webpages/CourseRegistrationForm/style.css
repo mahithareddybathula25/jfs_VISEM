@@ -1,0 +1,55 @@
+body 
+{
+    font-family: Times New Roman,sans-serif;
+    background:yellow;
+    padding:40px;
+}
+.container
+{
+    background:white;
+    max-width:550px;
+    margin:auto;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,0,0,0.3);
+}
+h2
+{
+    text-align:center;
+    margin-bottom:30px;
+    color:blue;
+}
+.subject-list
+{
+    display:block;
+    padding:6px 0;
+    cursor:pointer;
+}
+.subject-list label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.total-box
+{
+    background:skyblue;
+    padding:10px;
+    font-size:18px;
+    margin:20px 0;
+    border-radius:5px;
+}
+button
+{
+    width:100%;
+    padding:10px;
+    font-size:16px;
+    background: pink;
+    border:none;
+    color:black;
+    border-radius:5px;
+    cursor:pointer;
+}
+button:hover
+{
+    background:blue;
+}
