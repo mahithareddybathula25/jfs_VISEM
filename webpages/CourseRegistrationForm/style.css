@@ -25,10 +25,6 @@ h2
     padding:6px 0;
     cursor:pointer;
 }
-.subject-list label {
-    display: block;
-    margin-bottom: 6px;
-}
 
 .total-box
 {
@@ -52,4 +48,9 @@ button
 button:hover
 {
     background:blue;
+}
+label
+{
+    display:block;
+    margin-top:10px;
 }
