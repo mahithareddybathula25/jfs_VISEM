@@ -1,56 +1,84 @@
-body 
-{
-    font-family: Times New Roman,sans-serif;
-    background:yellow;
-    padding:40px;
-}
-.container
-{
-    background:white;
-    max-width:550px;
-    margin:auto;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 0 15px rgba(0,0,0,0.3);
-}
-h2
-{
-    text-align:center;
-    margin-bottom:30px;
-    color:blue;
-}
-.subject-list
-{
-    display:block;
-    padding:6px 0;
-    cursor:pointer;
+body {
+    font-family: Times New Roman, sans-serif;
+    background: yellow;
+    padding: 40px;
 }
 
-.total-box
-{
-    background:skyblue;
-    padding:10px;
-    font-size:18px;
-    margin:20px 0;
-    border-radius:5px;
+.container {
+    background: white;
+    max-width: 550px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
-button
-{
-    width:100%;
-    padding:10px;
-    font-size:16px;
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: blue;
+}
+
+/* Student name in same line */
+.name-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.name-row input {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 2px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+.subject-list label {
+    margin-bottom: 6px;
+    display: block;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.total-box {
+    background: skyblue;
+    padding: 10px;
+    font-size: 18px;
+    margin: 20px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
     background: pink;
-    border:none;
-    color:black;
-    border-radius:5px;
-    cursor:pointer;
+    border: none;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
 }
-button:hover
-{
-    background:blue;
+
+button:hover {
+    background: blue;
+    color: white;
 }
-label
-{
-    display:block;
-    margin-top:10px;
+
+/* ---------- RESULT MESSAGE BOX ---------- */
+#resultMessage {
+    margin-top: 20px;
+    padding: 15px;
+    background: white;
+    font-size: 17px;
+    white-space: pre-line;  
+    border-radius: 6px;
+    display: none; /* hidden until submitted */
 }
